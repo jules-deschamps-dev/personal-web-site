@@ -133,11 +133,5 @@ function moovingLayer(layerId){
     else if (actif == 'EGLD'){
       document.getElementById('QRcode').style.backgroundImage = "url('../img/crypto/EGLD_QRCode.png')";
     }
-    else if (actif == 'CAPS'){
-      document.getElementById('QRcode').style.backgroundImage = "url('../img/crypto/CAPS_QRCode.png')";
-    }
-    else if (actif == 'MEX'){
-      document.getElementById('QRcode').style.backgroundImage = "url('../img/crypto/MEX_QRCode.png')";
-    }
   } 
 

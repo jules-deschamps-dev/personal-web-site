@@ -35,7 +35,7 @@ $goldNumber: 1.6180; //nombre d'or
 
 // Variables générales
 $header--h: 6vw;
-$little_gap: convert_px-vw(11);
+$little_gap: 1vw;
 $little_gap--neg: convert_px-vw(-11);
 $medium_gap: convert_px-vw(38);
 $medium_gap--neg: convert_px-vw(-38);
@@ -50,7 +50,9 @@ html{
   overflow: hidden;
   header{
     position: fixed;
-    top: 4vw;
+    padding-top: calc(1vw + 20px);
+    padding-bottom: calc(1vw + 20px);
+    background-color: #202020;
     display: flex;
     align-items: center;
     width: 100vw;
@@ -71,19 +73,38 @@ html{
       background-position: bottom;
       overflow-x: hidden;
     }
+    footer{
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      padding-bottom: calc(1vh + 7px);
+    }
   }
 }
 section{
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 100vw;
   height: 100vh;
+  #top{
+    bottom: 100vh;
+    left: 0;
+  }
+  #home{
+    left: 0;
+    top: 0;
+  }
+  #tips{
+    top: 100vh;
+    left: 0;
+  }
 }
 
-.section-univers{
-  height: 100vh;
-  width: 100vw;
-}
+
+
 
 div {
   display: flex;
@@ -103,13 +124,22 @@ a{
 .ghost{
   display: none;
 }
-
+.greygard{
+  //filter: blur(2px);
+  cursor: not-allowed;
+  color: #202020;
+}
 
 
 
 
 
 // Objects //
+.bloc-80vp{
+  width: 80vw;
+  height: 80vh;
+}
+
 #progress_divtxt{
 	position: fixed;
   display: none;
@@ -127,9 +157,11 @@ a{
 }
 
 .navdiv{
-  width: calc(8vw * 1.618);
-  height: 8vw;
-  border-radius: 5vw;
+  width: calc(6vw * 1.618);
+  height: 6vw;
+  min-width: calc(45px * 1.618);
+  min-height: 45px;
+  border-radius: 3vw;
   background-color: whitesmoke;
   &--tips {
     background: linear-gradient(to right, blue, #FF007F, red 70%);
@@ -144,9 +176,11 @@ a{
 .social{
   width: 3vw;
   height: 3vw;
-  border-radius: 1.5vw;
+  min-width: 45px;
+  min-height: 45px;
+  border-radius: 50%;
   background-color: whitesmoke;
-  font-size: 2vw;
+  font-size: calc(1rem + 10px);
 }
 
 .justify{
@@ -155,6 +189,39 @@ a{
 .txtalign-center{
   text-align: center;
 }
+
+
+
+.link{
+  &-bubble{
+    &-circle{
+      border-radius: 50%;
+      &-mediumSize{
+        width: 6vw;
+        height: 6vw;
+        min-width: 45px;
+        min-height: 45px;
+        font-size: calc(1.5vw + 15px);
+      }
+    }
+  }
+}
+
+.bk{
+  &-white{
+    background-color: white;
+  }
+  &-black{
+    background-color: rgba($color: #000000, $alpha: 0.95);
+  }
+}
+
+.ft{
+  &-white{
+    color: white;
+  }
+}
+
 
 .bloc_buble-link{
   position: relative;
@@ -167,12 +234,13 @@ a{
 .underbloc-A_buble-link{
   margin: auto;
   flex-direction: column;
-
 }
 .buble-link{
   margin: auto;
   width: 8vw;
   height: calc(8vw * 1.618);
+  min-width: 70px;
+  min-height: calc(70px * 1.618);
   border-radius: 4vw;
   background: rgba(40,40,40,1);
   color: whitesmoke;
@@ -219,6 +287,11 @@ a{
   &-mediumRight{
     margin-right: $medium_gap;
   }
+
+  &-x-small{
+    margin-left: $little_gap;
+    margin-right: $little_gap;
+  }
 }
 
 /* size */
@@ -251,9 +324,14 @@ a{
   font-size: 200%;
 }
 
+h1{
+  align-content: center;
+  font-family: "_TINTIN";
+}
 h2{
   align-content: center;
   font-family: "_TINTIN";
+  font-size: 1rem;
 }
 h3{
   align-content: center;
@@ -262,4 +340,124 @@ h3{
 
 .white{
   color: white;
+}
+
+
+
+/* DEMO-SPECIFIC STYLES */
+.type__writer h1 {
+  color: #fff;
+  font-family: monospace;
+  font-size: 3em;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 1.5s steps(15, end),
+    blink-caret 1s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+
+
+
+
+
+.rainbowTxt{
+	background-color: white;
+	background-image: -moz-linear-gradient(45deg, red 10%, orange, yellow, green, blue, purple 100%);
+	background-clip: border-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;}
+.rainbowTxt2{
+	background-image: -moz-linear-gradient(-45deg, white 0%, black, black, white, white 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;}
+
+.semiExternalLinks{
+  display: block; 
+  background-color: black;
+  margin-left: -10px; 
+  padding-top: 15px; 
+  padding-bottom: 15px; 
+  text-align: center;}
+.semiExternalLinks:hover{
+  background-color: rgb(230, 230, 250); 
+  color: rgb(74, 5, 0);}
+
+.iconeCrypto{
+	position: relative;
+	height: 70%;}
+
+
+#cryptoTipsBloc:hover{
+  filter: contrast(200%);
+}
+
+
+
+.tipsButton{
+	background-color: rgba(255, 192, 203, .3);
+	text-align: center;}
+	.tipsButton:hover{
+    filter: drop-shadow(0px 0px 15px white);
+  }
+	.tips_crypto{
+    width: 12vh; 
+    height: 12vh; 
+    min-width: 90px; 
+    min-height: 90px;
+    border-radius: 50%;}
+
+	.tips_large{
+    width: 24vh; 
+    height: 10vh; 
+    min-width: 180px; 
+    min-height: 90px; 
+    border-radius: 90px; 
+    margin-bottom: 2px;}
+
+	.tips_adress{
+    width: 24vh; 
+    height: 6vh; 
+    min-width: 90px; 
+    min-height: 45px; 
+    border-radius: 90px;}
+
+#QRcode_displayer{
+	font-family: '_TINTIN';
+	width: 24vh; height: 24vh; 
+	min-width: 180px; min-height: 180px; 
+	border-radius: 30%; margin-bottom: 2px;}
+	#QRcode{
+    width: 80%; 
+    height: 80%; 
+    margin: 10%; 
+    background-size: contain; 
+    background-repeat: no-repeat;}
+
+
+#infoCaseTxt{
+  font-family: tintin;
+  position: fixed;
+  top: 0;
+  padding-left: 20px;
+  color: #fff;
+  z-index: 100;
 }

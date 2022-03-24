@@ -23,14 +23,21 @@
 
 	<header>
 		<nav class="margin">
-			<a href="" class="margin margin margin-right">
+			<a href="#home" class="margin margin-right">
+				<div class="link-bubble-circle link-bubble-circle-mediumSize bk-black ft-white">
+					<i class="fa-solid fa-campground margin"> </i>
+				</div>
+			</a>	
+
+			<a href="#tips" class="margin-x-small">
 				<div class="navdiv navdiv--tips">
 					<h2 class="margin white">
 						Tips
 					</h2>
 				</div>
 			</a>
-			<a href="#sect-A1" class="margin margin-left">
+
+			<a href="#top" class="margin-x-small">
 				<div class="navdiv navdiv--links">
 					<h2 class="margin">
 						Créations
@@ -38,39 +45,18 @@
 				</div>
 			</a>
 
-			<div class="column">
-				<a href="https://github.com/jules-deschamps-dev/" class="margin-left margin">
-					<div class="social">
-						<i class="fa-brands fa-github margin" style="font-size: 2vw;"></i>
-					</div>
-				</a>
-				<a href="#" class="margin-left margin">
-					<div class="social">
-						<i class="fa-brands fa-linkedin margin"></i>
-					</div>
-				</a>
-			</div>
-
-			<div class="column">
-				<a href="#" class="margin-left margin">
-					<div class="social">
-						<i class="fas fa-at margin"></i>
-					</div>
-				</a>
-
-				<a href="https://t.me/julesdesch" class="margin-left margin">
-					<div class="social">
-						<i class="fa-brands fa-telegram margin"></i>
-					</div>
-				</a>
-			</div>
+			<a href="#home" class="margin margin-left">
+				<div class="link-bubble-circle link-bubble-circle-mediumSize bk-black ft-white">
+					<i class="fa-solid fa-code margin"></i>
+				</div>
+			</a>
 		</nav>
 	</header>
 
 
   <body>
     <main>
-			<section id="sect-A1"class="absolute t100vw">
+			<section id="top">
 				<div class="bloc_buble-link">
 					<div class="underbloc-A_buble-link">
 						<a href="https://push-or-fold.org">
@@ -86,6 +72,87 @@
 					</div>
 				</div>
 			</section>
+
+			<section id="home">
+				<div class="margin type__writer">
+					<span class="margin ft-white ft-biggest">
+						<h1>
+							Bienvenue
+						</h1> 
+					</span>
+				</div>
+			</section>
+
+			<section id='tips'>
+				<div id="infoCase" >
+					<p id="infoCaseTxt" class="" style="display: inline-flex;"></p>
+				</div>
+				
+				<div id="crpyoTipsBloc" style="position: absolute; left: calc(50% - 50vw  / 2); top: 32vh; width: 50vw; height: 40vh; text-align: center; ">
+					<!-- BTC -->
+					<div class="row">
+						<button id="BTC" class="tipsButton tips_crypto margin margin-right0" onmouseover="QRCode_echo(1, 'BTC')" onmouseleave="QRCode_echo(0)" onclick="copy_to_clipboard(this.id);">
+							<img src="../img/crypto/btcSymbol.png" class="iconeCrypto" style="rotate: 10deg;"/>
+							<div id="BTC_adress" style="display: none;">bc1q8d4h7jqwck3jy9me4035urjjs764xrh6d6flwn</div>
+						</button>
+					
+						<!-- EGLD -->
+						<button id="EGLD" class="tipsButton tips_crypto margin margin-left0" onmouseover="QRCode_echo(1, 'EGLD')" onmouseleave="QRCode_echo(0)" onclick="copy_to_clipboard(this.id);">
+							<img src="../img/crypto/elrondSymbol.png" class="iconeCrypto" style="filter: invert(100%);" />
+							<div id="EGLD_adress" style="display: none;">erd15daqcn6e780m5mugxyxsmu38jqvvl5fl62qrsjlwayvkljqg5qgsx0t6ls</div>
+						</button>
+					</div>
+				
+					<!-- QR CODE -->
+					
+					<button id="QRcode_displayer" class="margin" style="background-size: contain; margin-top: 2px; background-color: transparent;">
+						<div id="QRcode" style="display: none;"></div>
+						<p id="QRcodeTxt" class="" style="display: inline-flex;"> <i class="rainbowTxt2 fas fa-qrcode" style="font-size: 82px; background-color: white;"></i></p>
+					</button>
+					<br/>
+					
+					<br/>
+					
+				</div>
+				
+				<!--
+					<a href="https://fr.tipeee.com/julosd">
+						<button id="TIPEE" class="tipsButton tips_large">
+							<img src="img/tipeeLogo.png" class="iconeCrypto"/>
+						</button>
+					</a>
+				-->
+						</div>
+				
+				
+			</section>
     </main>
+
+		<footer>
+			<div class="margin row">
+				<a href="https://github.com/jules-deschamps-dev/" class="margin-x-small" aria-label="github">
+					<div class="social">
+						<i class="fa-brands fa-github margin"></i>
+					</div>
+				</a>
+				<a href="#" class="greygard" class="margin-x-small" aria-label="linkedin" title="soon..">
+					<div class="social">
+						<i class="fa-brands fa-linkedin margin"></i>
+					</div>
+				</a>
+
+				<a href="mailto:jules.deschamps.dev@gmail.com" class="margin-x-small"  aria-label="email">
+					<div class="social">
+						<i class="fas fa-at margin"></i>
+					</div>
+				</a>
+
+				<a href="https://t.me/julesdesch"aria-label="telegram">
+					<div class="social">
+						<i class="fa-brands fa-telegram margin"></i>
+					</div>
+				</a>
+			</div>
+		</footer>
   </body>
 </html>
