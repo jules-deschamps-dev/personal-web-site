@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "tintin";
+  src: url("fonts/tintin_talking.ttf");
+}
+@font-face {
+  font-family: "_TINTIN";
+  src: url("fonts/tintinMAJ.ttf");
+}
+@font-face {
+  font-family: "sourceCode-SemiBold";
+  src: url("fonts/static/SourceCodePro-Regular.ttf");
+}
+@font-face {
+  font-family: "fas-regular";
+  src: url("fonts/webfonts/fa-regular-400.ttf");
+}
+html {
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+html header {
+  position: fixed;
+  top: 4vw;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  z-index: 2;
+}
+html header nav {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+html body {
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  overflow-x: hidden;
+}
+html body main {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  overflow-x: hidden;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.section-univers {
+  height: 100vh;
+  width: 100vw;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ghost {
+  display: none;
+}
+
+#progress_divtxt {
+  position: fixed;
+  display: none;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 50px;
+  font-family: tintin;
+  color: whitesmoke;
+  z-index: 2;
+}
+
+.website-link-div {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+
+.navdiv {
+  width: 12.944vw;
+  height: 8vw;
+  border-radius: 5vw;
+  background-color: whitesmoke;
+}
+.navdiv--tips {
+  background: linear-gradient(to right, blue, #FF007F, red 70%);
+}
+.navdiv:hover {
+  transition-property: scale;
+  transition-duration: 300ms;
+  scale: 1.1;
+}
+
+.social {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 1.5vw;
+  background-color: whitesmoke;
+  font-size: 2vw;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.txtalign-center {
+  text-align: center;
+}
+
+.bloc_buble-link {
+  position: relative;
+  flex-direction: row;
+  left: 15%;
+  top: 30%;
+  width: 70%;
+  height: 60%;
+}
+
+.underbloc-A_buble-link {
+  margin: auto;
+  flex-direction: column;
+}
+
+.buble-link {
+  margin: auto;
+  width: 8vw;
+  height: 12.944vw;
+  border-radius: 4vw;
+  background: #282828;
+  color: whitesmoke;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.l100vw {
+  left: 100vw;
+}
+
+.t100vw {
+  top: 100vw;
+}
+
+.margin {
+  margin: auto;
+}
+.margin-left0 {
+  margin-left: 0;
+}
+.margin-right0 {
+  margin-right: 0;
+}
+.margin-left {
+  margin-left: 1.618vw;
+}
+.margin-right {
+  margin-right: 1.618vw;
+}
+.margin-mediumRight {
+  margin-right: 10.1333333333vw;
+}
+
+/* size */
+.w100 {
+  width: 100%;
+}
+
+.size--biggest {
+  width: 100vw;
+  height: 100vh;
+}
+.size-bigger {
+  width: 100%;
+  height: 100%;
+}
+
+.fas {
+  margin: auto;
+}
+
+.font-big {
+  font-size: 200%;
+}
+
+h2 {
+  align-content: center;
+  font-family: "_TINTIN";
+}
+
+h3 {
+  align-content: center;
+  font-family: "sourceCode-SemiBold";
+}
+
+.white {
+  color: white;
+}
+
+/*# sourceMappingURL=form.css.map */

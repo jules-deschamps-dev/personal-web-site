@@ -1,0 +1,265 @@
+@font-face{
+	font-family: 'tintin';
+	src : url('fonts/tintin_talking.ttf');
+}
+@font-face {
+	font-family: '_TINTIN';
+	src : url('fonts/tintinMAJ.ttf');
+}
+@font-face{
+  font-family: "sourceCode-SemiBold";
+  src : url('fonts/static/SourceCodePro-Regular.ttf')
+}
+
+@function convert_px-vw($width){
+  $virtual: calc($width / 375 * 100vw);
+  @return ($virtual);
+}
+
+@font-face{
+  font-family: "fas-regular";
+  src: url("fonts/webfonts/fa-regular-400.ttf");
+}
+
+@function alea100(){
+  $o: random(2);
+  $virtual: $borne_alea100;
+  @if ($o==0){
+    $virtual: $borne_alea100n;
+  }
+  @return ($virtual);
+}
+
+// Variables racines
+$goldNumber: 1.6180; //nombre d'or
+
+// Variables générales
+$header--h: 6vw;
+$little_gap: convert_px-vw(11);
+$little_gap--neg: convert_px-vw(-11);
+$medium_gap: convert_px-vw(38);
+$medium_gap--neg: convert_px-vw(-38);
+$borne_alea100: random(100) + "%";
+$borne_alea100n: random(100) *-1 + "%";
+
+
+
+
+html{
+  scroll-behavior: smooth;
+  overflow: hidden;
+  header{
+    position: fixed;
+    top: 4vw;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    z-index: 2;
+    nav{
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  body{
+    margin: 0;
+    background-color: rgba(black, .95);
+    overflow-x: hidden;
+    main{
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      overflow-x: hidden;
+    }
+  }
+}
+section{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.section-univers{
+  height: 100vh;
+  width: 100vw;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+.ghost{
+  display: none;
+}
+
+
+
+
+
+
+// Objects //
+#progress_divtxt{
+	position: fixed;
+  display: none;
+	left: 0; bottom: 0;
+	width: 100px; height: 50px;
+	font-family: tintin;
+  color: whitesmoke;
+  z-index: 2;
+}
+
+.website-link-div{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+
+.navdiv{
+  width: calc(8vw * 1.618);
+  height: 8vw;
+  border-radius: 5vw;
+  background-color: whitesmoke;
+  &--tips {
+    background: linear-gradient(to right, blue, #FF007F, red 70%);
+  }
+  &:hover{
+    transition-property: scale;
+    transition-duration: 300ms;
+    scale: 1.1;
+  }
+}
+
+.social{
+  width: 3vw;
+  height: 3vw;
+  border-radius: 1.5vw;
+  background-color: whitesmoke;
+  font-size: 2vw;
+}
+
+.justify{
+  text-align: justify;
+}
+.txtalign-center{
+  text-align: center;
+}
+
+.bloc_buble-link{
+  position: relative;
+  flex-direction: row;
+  left: 15%;
+  top: 30%;
+  width: 70%;
+  height: 60%;
+}
+.underbloc-A_buble-link{
+  margin: auto;
+  flex-direction: column;
+
+}
+.buble-link{
+  margin: auto;
+  width: 8vw;
+  height: calc(8vw * 1.618);
+  border-radius: 4vw;
+  background: rgba(40,40,40,1);
+  color: whitesmoke;
+}
+
+
+.absolute {
+  position: absolute;
+}
+
+.flex{
+  display: flex
+}
+
+.row{
+  flex-direction: row;
+}
+
+.column{
+  flex-direction: column;
+}
+
+.l100vw{
+  left: 100vw;
+}
+.t100vw{
+  top: 100vw;
+}
+
+.margin{
+  margin: auto;
+  &-left0{
+    margin-left: 0;
+  }
+  &-right0{
+    margin-right: 0;
+  }
+  &-left{
+    margin-left: 1.618vw;
+  }
+  &-right{
+    margin-right: 1.618vw;
+  }
+  &-mediumRight{
+    margin-right: $medium_gap;
+  }
+}
+
+/* size */
+.w100{
+  width: 100%;
+}
+
+.size{
+  &--biggest{
+    width: 100vw;
+    height: 100vh;
+  }
+  &-bigger{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.fas{
+  margin: auto;
+}
+
+
+
+
+
+
+
+.font-big{
+  font-size: 200%;
+}
+
+h2{
+  align-content: center;
+  font-family: "_TINTIN";
+}
+h3{
+  align-content: center;
+  font-family: "sourceCode-SemiBold";
+}
+
+.white{
+  color: white;
+}

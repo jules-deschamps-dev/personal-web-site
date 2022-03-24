@@ -1,0 +1,29 @@
+
+
+
+
+
+
+html{
+  body{
+    margin: 0;
+    main{
+      background-image: url(bck/background--a.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
+  }
+}
+
+div{
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  overflow: hidden;
+}
+
+.mooving-background{
+  width: 100vw;
+  height: 100vw;
+}
